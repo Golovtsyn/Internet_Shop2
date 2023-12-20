@@ -1,0 +1,16 @@
+﻿<Window x:Class="Internet_Shop.GuestMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Internet_Shop"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="GuestMenu" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Content="Интернет магазин"  HorizontalAlignment="Left" Margin="180,24,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="24" Foreground="#FF698AFF"/>
+        <Button Content="Меню" HorizontalAlignment="Left" Margin="577,24,0,0" VerticalAlignment="Top" Height="40" Width="200" Background="#FF698AFF" BorderBrush="#FF698AFF" Click="Authorization"/>
+        <Image Margin="25,24,665,322" Source="/Logo.jpg" Stretch="Fill"/>
+    </Grid>
+</Window>

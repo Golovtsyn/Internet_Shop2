@@ -1,0 +1,92 @@
+﻿<Window x:Class="Internet_Shop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Internet_Shop"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Close"
+                        Executed="Vihod"/>
+    </Window.CommandBindings>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2.5*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Row="0" Grid.Column="1" Click="Vihod" Command="ApplicationCommands.Close"  
+         Background="#698AFF"
+         Foreground="#F5F5F5"
+         FontFamily="Arial"
+         FontSize="20"
+         Content="Выйти" 
+         Margin="20" 
+         MinWidth="150" MinHeight="50"/>
+
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2"
+                 Margin="20">
+            <TextBlock x:Name="userName"
+                    Text="" 
+                    FontFamily="Arial" FontSize="16" 
+                    Foreground="#FF698AFF"/>
+            <TextBlock x:Name="userRole"
+                    Text="" 
+                    FontFamily="Arial" FontSize="16" 
+                    Foreground="#FF698AFF"/>
+        </StackPanel>
+
+        <Grid Grid.Row="2" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="clientsPage" Click="Clients"
+          Margin = "15"
+          Background="#698AFF"
+          Foreground="#F5F5F5"
+          FontFamily="Arial"
+          FontSize="20"
+          MinHeight="75"
+          Content="Клиенты"/>
+            <Button x:Name="employeesPage" Click="Sotrudniki"
+          Grid.Row="0" Grid.Column="1"
+          Margin = "15"
+          Background="#698AFF" 
+          Foreground="#F5F5F5"
+          FontFamily="Arial"
+          FontSize="20"
+          MinHeight="75" 
+          Content="Сотрудники"/>
+            <Button x:Name="ordersPage" Click="Zakazi"
+          Grid.Row="1" Grid.Column="0"
+          Margin = "15"
+          Background="#698AFF" 
+          Foreground="#F5F5F5"
+          FontFamily="Arial"
+          FontSize="20"
+          MinHeight="75" 
+          Content="Заказы"/>
+            <Button Grid.Row="1" Grid.Column="1" Click="Tovari"
+          Margin = "15"
+          Background="#698AFF" 
+          Foreground="#F5F5F5"
+          FontFamily="Arial"
+          FontSize="20"
+          MinHeight="75" 
+          Content="Товары"/>
+        </Grid>
+    </Grid>
+</Window>
